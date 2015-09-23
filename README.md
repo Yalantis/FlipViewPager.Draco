@@ -1,6 +1,6 @@
 # FlipViewPager.Draco
 
-This project aims to provide a working page flip implementation for usage in ListView. Made in [Yalantis] (http://yalantis.com/)
+This project aims to provide a working page flip implementation for usage in ListView. Made in [Yalantis] (https://yalantis.com/?utm_source=github)
 
 ![Preview](https://d13yacurqjgara.cloudfront.net/users/125056/screenshots/1758298/99miles-find-friends-interface-animation.gif)
 
