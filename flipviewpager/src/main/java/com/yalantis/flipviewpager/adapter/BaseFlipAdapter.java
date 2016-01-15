@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
 
 import com.yalantis.flipviewpager.R;
 import com.yalantis.flipviewpager.utils.FlipSettings;
@@ -19,11 +20,21 @@ public abstract class BaseFlipAdapter<T> extends BaseAdapter {
     private List<T> items;
     private FlipSettings settings;
     private LayoutInflater inflater;
+    private float itemHeight;
 
     public BaseFlipAdapter(Context context, List<T> items, FlipSettings settings) {
         this.items = items;
         this.settings = settings;
         inflater = LayoutInflater.from(context);
+    }
+
+
+    public float getItemHeight() {
+        return itemHeight;
+    }
+
+    public void setItemHeight(float itemHeight) {
+        this.itemHeight = itemHeight;
     }
 
     @Override
@@ -52,12 +63,15 @@ public abstract class BaseFlipAdapter<T> extends BaseAdapter {
         final ViewHolder viewHolder;
         if (convertView == null)
             convertView = inflater.inflate(R.layout.flipper, null);
+
+
         if (convertView.getTag() != null) {
             viewHolder = (ViewHolder) convertView.getTag();
         } else {
             viewHolder = new ViewHolder();
             convertView.setTag(viewHolder);
             viewHolder.mFlipViewPager = (FlipViewPager) convertView.findViewById(R.id.flip_view);
+
         }
 
         // Listener to store flipped page
@@ -70,16 +84,25 @@ public abstract class BaseFlipAdapter<T> extends BaseAdapter {
 
         if (viewHolder.mFlipViewPager.getAdapter() == null) {
             viewHolder.mFlipViewPager.setAdapter(new MergeAdapter(item1, item2), settings.getDefaultPage(), position, items.size());
+            if(itemHeight!=0) {
+                FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(viewHolder.mFlipViewPager.getLayoutParams());
+                params.height = (int) itemHeight;
+                viewHolder.mFlipViewPager.setLayoutParams(params);
+            }
         } else {
             // Recycling internal adapter
             // So, it's double recycling - we have only 4-5 mFlipViewPager objects
             // and each of them have an adapter
+
             MergeAdapter adapter = (MergeAdapter) viewHolder.mFlipViewPager.getAdapter();
             adapter.updateData(item1, item2);
             viewHolder.mFlipViewPager.setAdapter(adapter, settings.getPageForPosition(position), position, items.size());
+
         }
         return convertView;
     }
+
+
 
     class ViewHolder {
         FlipViewPager mFlipViewPager;

@@ -64,6 +64,7 @@ public class FriendsActivity extends ActionBarActivity {
                 holder.rightAvatar = (ImageView) convertView.findViewById(R.id.second);
                 holder.infoPage = getLayoutInflater().inflate(R.layout.friends_info, parent, false);
                 holder.nickName = (TextView) holder.infoPage.findViewById(R.id.nickname);
+                setItemHeight(getResources().getDimension(R.dimen.item_height));
 
                 for (int id : IDS_INTEREST)
                     holder.interests.add((TextView) holder.infoPage.findViewById(id));
