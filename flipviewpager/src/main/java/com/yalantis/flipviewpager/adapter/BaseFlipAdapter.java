@@ -84,7 +84,7 @@ public abstract class BaseFlipAdapter<T> extends BaseAdapter {
 
         if (viewHolder.mFlipViewPager.getAdapter() == null) {
             viewHolder.mFlipViewPager.setAdapter(new MergeAdapter(item1, item2), settings.getDefaultPage(), position, items.size());
-            if(itemHeight!=0) {
+            if (itemHeight != 0) {
                 FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(viewHolder.mFlipViewPager.getLayoutParams());
                 params.height = (int) itemHeight;
                 viewHolder.mFlipViewPager.setLayoutParams(params);
@@ -101,7 +101,6 @@ public abstract class BaseFlipAdapter<T> extends BaseAdapter {
         }
         return convertView;
     }
-
 
 
     class ViewHolder {
