@@ -3,6 +3,7 @@ package com.yalantis.flip.sample.activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -24,7 +25,7 @@ import java.util.List;
 /**
  * @author Yalantis
  */
-public class FriendsActivity extends ActionBarActivity {
+public class FriendsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +65,7 @@ public class FriendsActivity extends ActionBarActivity {
                 holder.rightAvatar = (ImageView) convertView.findViewById(R.id.second);
                 holder.infoPage = getLayoutInflater().inflate(R.layout.friends_info, parent, false);
                 holder.nickName = (TextView) holder.infoPage.findViewById(R.id.nickname);
+                setItemHeight(getResources().getDimension(R.dimen.item_height));
 
                 for (int id : IDS_INTEREST)
                     holder.interests.add((TextView) holder.infoPage.findViewById(id));

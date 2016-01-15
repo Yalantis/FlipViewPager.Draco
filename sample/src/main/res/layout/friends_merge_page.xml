@@ -13,21 +13,21 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:contentDescription="left image"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/item_height"
         android:scaleType="fitXY" />
 
     <LinearLayout
         android:layout_width="1dp"
         android:layout_weight="0"
         android:background="#000000"
-        android:layout_height="fill_parent"/>
+        android:layout_height="@dimen/item_height"/>
     
     <ImageView
         android:id="@+id/second"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:contentDescription="right image"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/item_height"
         android:scaleType="fitXY" />
 
 </LinearLayout>
