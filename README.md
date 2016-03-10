@@ -1,3 +1,10 @@
+# Changes:
+
+  * Made clickable views like a button clickable inside the FlipViewPager.
+  * Use RecyclerView.
+  * Updated to API 23.
+  * Added support for close clicks on a MergePage e.g. to add a close button.
+
 # FlipViewPager.Draco
 
 This project aims to provide a working page flip implementation for usage in ListView. Made in [Yalantis] (https://yalantis.com/?utm_source=github)
