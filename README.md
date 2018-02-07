@@ -7,15 +7,15 @@
 
 # FlipViewPager.Draco
 
-This project aims to provide a working page flip implementation for usage in ListView. Made in [Yalantis] (https://yalantis.com/?utm_source=github)
+This project aims to provide a working page flip implementation for usage in ListView. Made in [Yalantis](https://yalantis.com/?utm_source=github)
 
-![Preview](https://d13yacurqjgara.cloudfront.net/users/125056/screenshots/1758298/99miles-find-friends-interface-animation.gif)
+![Preview](https://cdn.dribbble.com/users/125056/screenshots/1758298/99miles-find-friends-interface-animation.gif)
 
-* Check this [project on Dribbble] (https://dribbble.com/shots/1758298-Find-Friends-Interaction?list=users&offset=35)
+* Check this [project on Dribbble](https://dribbble.com/shots/1758298-Find-Friends-Interaction?list=users&offset=35)
 
-* See how it works on [Youtube] (https://www.youtube.com/watch?v=zNRPjS53m5w)
+* See how it works on [Youtube](https://www.youtube.com/watch?v=zNRPjS53m5w)
 
-#Usage
+# Usage
 
 *For a working implementation, Have a look at the Sample Project - sample*
 
@@ -79,7 +79,7 @@ To achieve the same grid-looking view you should:
 
 	```
 
-4. 	Create your adapter and extend it from ```BaseFlipAdapter<T>```
+4. Create your adapter and extend it from ```BaseFlipAdapter<T>```
 
 	``` java
 	class FriendsAdapter extends BaseFlipAdapter<Friend> {
@@ -99,27 +99,27 @@ To achieve the same grid-looking view you should:
 	}
 	```
 
-5.  Set your adapter in ```ListView```
+5. Set your adapter in ```ListView```
 	``` java
 	final ListView friends = (ListView) findViewById(R.id.friends);
 	friends.setAdapter(new FriendsAdapter(this, Utils.friends, settings));
 	```
 
-6.  You can handle clicks just like in regular ```ListView```
+6. You can handle clicks just like in regular ```ListView```
 
-``` java
-friends.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Friend friend = (Friend) friends.getAdapter().getItem(position);
-        Toast.makeText(FriendsActivity.this, friend.getNickname(), Toast.LENGTH_SHORT).show();
-    }
-});
-```
+	``` java
+	friends.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+	    @Override
+	    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		Friend friend = (Friend) friends.getAdapter().getItem(position);
+		Toast.makeText(FriendsActivity.this, friend.getNickname(), Toast.LENGTH_SHORT).show();
+	    }
+	});
+	```
 
 More options will be added soon :)
 
-#Customization
+# Customization
 
 To customize page will be shown first - create and pass FlipSettings object into adapter
 
@@ -127,7 +127,7 @@ To customize page will be shown first - create and pass FlipSettings object into
 FlipSettings settings = new FlipSettings.Builder().defaultPage(1).build();
 ```
 
-#Compatibility
+# Compatibility
 
   * Android 4.0+
 
