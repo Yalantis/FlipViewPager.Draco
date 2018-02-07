@@ -107,15 +107,15 @@ To achieve the same grid-looking view you should:
 
 6. You can handle clicks just like in regular ```ListView```
 
-``` java
-friends.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Friend friend = (Friend) friends.getAdapter().getItem(position);
-        Toast.makeText(FriendsActivity.this, friend.getNickname(), Toast.LENGTH_SHORT).show();
-    }
-});
-```
+	``` java
+	friends.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+	    @Override
+	    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		Friend friend = (Friend) friends.getAdapter().getItem(position);
+		Toast.makeText(FriendsActivity.this, friend.getNickname(), Toast.LENGTH_SHORT).show();
+	    }
+	});
+	```
 
 More options will be added soon :)
 
