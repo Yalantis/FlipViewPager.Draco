@@ -1,38 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="@android:color/transparent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
 
     <com.yalantis.flip.sample.views.FontTextView
-        style="@style/TextView.Nickname"
-        android:id="@+id/nickname" />
+        android:id="@+id/nickname"
+        style="@style/TextView.Nickname" />
 
     <LinearLayout
-        android:layout_below="@+id/nickname"
-        android:id="@+id/interestsPrimary"
-        style="@style/LinearLayout.Interests">
+        android:id="@+id/buttonsPrimary"
+        style="@style/LinearLayout.Buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <com.yalantis.flip.sample.views.FontTextView
-            style="@style/TextView.Interest"
-            android:id="@+id/interest_1" />
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_show"
+            style="@style/TextView.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="See" />
 
-        <com.yalantis.flip.sample.views.FontTextView
-            style="@style/TextView.Interest"
-            android:id="@+id/interest_2" />
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_close"
+            style="@style/TextView.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="Close" />
 
-        <com.yalantis.flip.sample.views.FontTextView
-            style="@style/TextView.Interest"
-            android:id="@+id/interest_3" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/interestsPrimary"
+        style="@style/LinearLayout.Interests"
+        android:layout_below="@+id/nickname">
+
+        <com.yalantis.flip.sample.views.FontTextView
+            android:id="@+id/interest_1"
+            style="@style/TextView.Interest" />
+
+        <com.yalantis.flip.sample.views.FontTextView
+            android:id="@+id/interest_2"
+            style="@style/TextView.Interest" />
+
+        <com.yalantis.flip.sample.views.FontTextView
+            android:id="@+id/interest_3"
+            style="@style/TextView.Interest" />
+    </LinearLayout>
 
     <LinearLayout
-        android:layout_below="@+id/interestsPrimary"
         android:id="@+id/interestsSecondary"
-        android:layout_marginTop="5dp"
-        style="@style/LinearLayout.Interests">
+        style="@style/LinearLayout.Interests"
+        android:layout_below="@+id/interestsPrimary"
+        android:layout_marginTop="5dp">
 
         <com.yalantis.flip.sample.views.FontTextView
             android:id="@+id/interest_4"

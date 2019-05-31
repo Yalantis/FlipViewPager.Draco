@@ -1,5 +1,8 @@
 package com.yalantis.flip.sample;
 
+import android.app.Activity;
+import android.util.DisplayMetrics;
+
 import com.yalantis.flip.sample.model.Friend;
 
 import java.util.ArrayList;
@@ -21,5 +24,13 @@ public class Utils {
         friends.add(new Friend(R.drawable.kirill, "KIRILL", R.color.saffron, "Development", "Android", "Healthcare", "Sport", "Rock Music"));
         friends.add(new Friend(R.drawable.julia, "JULIA", R.color.green, "Cinema", "Music", "Tatoo", "Animals", "Management"));
         friends.add(new Friend(R.drawable.yalantis, "YALANTIS", R.color.purple, "Android", "IOS", "Application", "Development", "Company"));
+    }
+
+
+    public static int getActivityWidth(Activity ba) {
+        DisplayMetrics dm = new DisplayMetrics();
+        ba.getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+        return (int) dm.widthPixels;
     }
 }
