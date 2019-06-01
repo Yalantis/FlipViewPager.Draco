@@ -23,6 +23,12 @@
         <item name="android:layout_marginLeft">20dp</item>
     </style>
 
+    <style name="TextView.Button" parent="Base.Widget.AppCompat.Button">
+        <item name="android:background">@drawable/round_textview</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+
     <style name="LinearLayout" />
 
     <style name="LinearLayout.Interests">
@@ -31,5 +37,12 @@
         <item name="android:layout_marginTop">14dp</item>
         <item name="android:layout_marginLeft">14dp</item>
         <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LinearLayout.Buttons">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:orientation">vertical</item>
     </style>
 </resources>
