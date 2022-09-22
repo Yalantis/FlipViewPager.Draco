@@ -1,11 +1,12 @@
 package com.yalantis.flip.sample.activity;
 
-import android.support.v7.app.ActionBarActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * @author Yalantis
  */
-public class FriendsActivity extends ActionBarActivity {
+public class FriendsActivity extends AppCompatActivity {
 //
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {

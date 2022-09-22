@@ -1,11 +1,12 @@
 package com.yalantis.flipviewpager.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.yalantis.flipviewpager.R;
 import com.yalantis.flipviewpager.utils.FlipSettings;
