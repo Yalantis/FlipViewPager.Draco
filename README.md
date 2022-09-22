@@ -24,7 +24,7 @@ To achieve the same grid-looking view you should:
 1. Include the library as local library project:
 
 	``` groovy
-	compile 'com.yalantis:flipviewpager:1.0.0'
+	implementation 'com.yalantis:flipviewpager:1.0.1'
 	```
 
 2. Create your main layout, it will be the view with 2 items merged together:
@@ -132,6 +132,11 @@ FlipSettings settings = new FlipSettings.Builder().defaultPage(1).build();
   * Android 4.0+
 
 # Changelog
+
+### Version: 1.0.1
+
+  * Update dependencies
+  * Migrate to AndroidX
 
 ### Version: 1.0
 
